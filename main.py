@@ -32,10 +32,10 @@ def main():
     print(listOfProcessIds[0]['pid'])
     aud_pr_pid = listOfProcessIds[0]['pid']
     aud_pr = psutil.Process(pid=aud_pr_pid)
-    aud_pr.cpu_affinity([1])
+    aud_pr.cpu_affinity([2])
     aud_pr.nice(psutil.ABOVE_NORMAL_PRIORITY_CLASS)
     print(aud_pr.nice)
-    notification.notify("Voicemeeter-Discord-Fixer","The audiodg.exe was set to Cpu 2, and the Priority of the Process is HIGHER_THEN_NORMAL")
+    notification.notify("Voicemeeter-Discord-Fixer","The audiodg.exe was set to Cpu 3, and the Priority of the Process is HIGHER_THEN_NORMAL")
 
 
 if __name__ == '__main__':
